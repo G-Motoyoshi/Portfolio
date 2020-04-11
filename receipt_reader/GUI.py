@@ -25,25 +25,3 @@ def folderopen(text):
 
 def notice_end():
     tkinter.messagebox.showinfo('レシート読み取り', '入力が完了しました。')
-
-def check_amount(filepath, amount):
-    ret = tkinter.messagebox.askyesno('入力情報の確認', f'これで正しいですか？\n{filepath}\n金額: {amount}')
-    if ret == False:
-        return True
-
-def input_correct():
-    root = tkinter.Tk()
-    root.geometry('300x200')
-    root.title('入力情報の修正')
-
-    # label = tkinter.Label(text='正しい情報')
-    # label.place(x=30, y=95)
-
-    text = tkinter.Entry(width=20)
-    # text.place(x=60, y=120)
-    text.pack()
-    out_text = text.get()
-
-    root.mainloop()
-
-    return out_text
